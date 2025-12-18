@@ -729,7 +729,7 @@ def restore_reminders(app):
 # ==================== MAIN ====================
 
 def main() -> None:
-    token = "8222510209:AAHZmAFZqOfjhDbrIzvPDwyL72M5mzypg44"
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
     app = Application.builder().token(token).build()
     
     # New reminder conversation

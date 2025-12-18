@@ -22,23 +22,25 @@ pip install -r requirements.txt
 ## Usage
 
 ### Start the Bot
+
 ```bash
 python bot.py
 ```
+
 Or double-click `start.bat`
 
 ### Commands
 
-| Command | Description |
-|---------|-------------|
-| `/start` | Welcome message and help |
-| `/newreminder` | Create a new reminder |
-| `/listreminders` | View all active reminders |
-| `/editreminder` | Modify an existing reminder |
-| `/deletereminder` | Remove a reminder |
-| `/ai` | Chat with AI assistant |
-| `/getid` | Get current chat ID (for group reminders) |
-| `/cancel` | Cancel current operation |
+| Command           | Description                               |
+| ----------------- | ----------------------------------------- |
+| `/start`          | Welcome message and help                  |
+| `/newreminder`    | Create a new reminder                     |
+| `/listreminders`  | View all active reminders                 |
+| `/editreminder`   | Modify an existing reminder               |
+| `/deletereminder` | Remove a reminder                         |
+| `/ai`             | Chat with AI assistant                    |
+| `/getid`          | Get current chat ID (for group reminders) |
+| `/cancel`         | Cancel current operation                  |
 
 ### Creating a Reminder
 
@@ -58,17 +60,58 @@ Or double-click `start.bat`
 
 ## Configuration
 
-Edit these values in `bot.py`:
+Set environment variable `TELEGRAM_BOT_TOKEN` or edit the fallback in `bot.py`.
 
-```python
-# Bot Token
-token = "YOUR_BOT_TOKEN"
+## Ubuntu VPS Deployment
 
-# Timezone
-TBILISI_TZ = pytz.timezone("Asia/Tbilisi")
+### 1. Upload Files to VPS
 
-# AI API Key
-OPENROUTER_API_KEY = "YOUR_API_KEY"
+```bash
+# On your local machine, or use git clone on VPS
+scp -r ./* root@YOUR_VPS_IP:/opt/reminder-bot/
+```
+
+### 2. Install Python & Dependencies
+
+```bash
+ssh root@YOUR_VPS_IP
+
+apt update && apt install -y python3 python3-pip python3-venv
+
+cd /opt/reminder-bot
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 3. Configure Systemd Service
+
+```bash
+# Edit the token in the service file
+nano /opt/reminder-bot/reminder-bot.service
+# Change: Environment=TELEGRAM_BOT_TOKEN=your_actual_token
+
+# Install the service
+cp /opt/reminder-bot/reminder-bot.service /etc/systemd/system/
+systemctl daemon-reload
+systemctl enable reminder-bot
+systemctl start reminder-bot
+```
+
+### 4. Verify & Manage
+
+```bash
+# Check status
+systemctl status reminder-bot
+
+# View logs
+journalctl -u reminder-bot -f
+
+# Restart after changes
+systemctl restart reminder-bot
+
+# Stop
+systemctl stop reminder-bot
 ```
 
 ## Files
