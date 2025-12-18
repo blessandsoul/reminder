@@ -1,0 +1,202 @@
+{
+  "6ce3f7dd": {
+    "user_id": 7797826721,
+    "frequency": "Hourly Range",
+    "time": "17:00",
+    "messages": [
+      {
+        "type": "text",
+        "content": "🚬"
+      }
+    ],
+    "chat_id": -1003342043555,
+    "attachment": null,
+    "repeat_until": null,
+    "custom_days": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "hourly_group": "17:00-23:59",
+    "id": "6ce3f7dd",
+    "created_at": "2025-12-18T15:58:46.324521+04:00",
+    "completed": false
+  },
+  "8c95e3f9": {
+    "user_id": 7797826721,
+    "frequency": "Hourly Range",
+    "time": "18:00",
+    "messages": [
+      {
+        "type": "text",
+        "content": "🚬"
+      }
+    ],
+    "chat_id": -1003342043555,
+    "attachment": null,
+    "repeat_until": null,
+    "custom_days": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "hourly_group": "17:00-23:59",
+    "id": "8c95e3f9",
+    "created_at": "2025-12-18T15:58:46.332987+04:00",
+    "completed": false
+  },
+  "2c47e2cf": {
+    "user_id": 7797826721,
+    "frequency": "Hourly Range",
+    "time": "19:00",
+    "messages": [
+      {
+        "type": "text",
+        "content": "🚬"
+      }
+    ],
+    "chat_id": -1003342043555,
+    "attachment": null,
+    "repeat_until": null,
+    "custom_days": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "hourly_group": "17:00-23:59",
+    "id": "2c47e2cf",
+    "created_at": "2025-12-18T15:58:46.335759+04:00",
+    "completed": false
+  },
+  "d58fcc61": {
+    "user_id": 7797826721,
+    "frequency": "Hourly Range",
+    "time": "20:00",
+    "messages": [
+      {
+        "type": "text",
+        "content": "🚬"
+      }
+    ],
+    "chat_id": -1003342043555,
+    "attachment": null,
+    "repeat_until": null,
+    "custom_days": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "hourly_group": "17:00-23:59",
+    "id": "d58fcc61",
+    "created_at": "2025-12-18T15:58:46.338209+04:00",
+    "completed": false
+  },
+  "796106b9": {
+    "user_id": 7797826721,
+    "frequency": "Hourly Range",
+    "time": "21:00",
+    "messages": [
+      {
+        "type": "text",
+        "content": "🚬"
+      }
+    ],
+    "chat_id": -1003342043555,
+    "attachment": null,
+    "repeat_until": null,
+    "custom_days": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "hourly_group": "17:00-23:59",
+    "id": "796106b9",
+    "created_at": "2025-12-18T15:58:46.340491+04:00",
+    "completed": false
+  },
+  "cf8f4422": {
+    "user_id": 7797826721,
+    "frequency": "Hourly Range",
+    "time": "22:00",
+    "messages": [
+      {
+        "type": "text",
+        "content": "🚬"
+      }
+    ],
+    "chat_id": -1003342043555,
+    "attachment": null,
+    "repeat_until": null,
+    "custom_days": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "hourly_group": "17:00-23:59",
+    "id": "cf8f4422",
+    "created_at": "2025-12-18T15:58:46.342889+04:00",
+    "completed": false
+  },
+  "777984f2": {
+    "user_id": 7797826721,
+    "frequency": "Hourly Range",
+    "time": "23:00",
+    "messages": [
+      {
+        "type": "text",
+        "content": "🚬"
+      }
+    ],
+    "chat_id": -1003342043555,
+    "attachment": null,
+    "repeat_until": null,
+    "custom_days": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "hourly_group": "17:00-23:59",
+    "id": "777984f2",
+    "created_at": "2025-12-18T15:58:46.344681+04:00",
+    "completed": false
+  },
+  "b471afa6": {
+    "user_id": 7797826721,
+    "frequency": "Hourly Range",
+    "time": "24:00",
+    "messages": [
+      {
+        "type": "text",
+        "content": "🚬"
+      }
+    ],
+    "chat_id": -1003342043555,
+    "attachment": null,
+    "repeat_until": null,
+    "custom_days": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "hourly_group": "17:00-23:59",
+    "id": "b471afa6",
+    "created_at": "2025-12-18T15:58:46.347155+04:00",
+    "completed": false
+  }
+}
