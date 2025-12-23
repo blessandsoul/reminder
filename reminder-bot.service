@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram Reminder Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/reminder-bot
+Environment=TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+ExecStart=/opt/reminder-bot/venv/bin/python /opt/reminder-bot/bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
