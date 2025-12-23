@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  reminder-bot:
+    build: .
+    container_name: reminder-bot
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Tbilisi
+    volumes:
+      # Persist data files
+      - ./users.json:/app/users.json
+      - ./reminders.json:/app/reminders.json
+      - ./chat_history.json:/app/chat_history.json
