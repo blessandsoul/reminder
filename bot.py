@@ -143,14 +143,19 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 
 async def new_reminder(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Start new reminder creation."""
-    context.user_data.clear()
-    reply_keyboard = [["Daily", "One-time"], ["Weekly", "Custom Days"], ["Hourly Range"]]
-    await update.message.reply_text(
-        "📅 How often should I remind you?\n\n"
-        "• Hourly Range: Every hour in a time range",
-        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
-    )
-    return FREQUENCY
+    try:
+        context.user_data.clear()
+        reply_keyboard = [["Daily", "One-time"], ["Weekly", "Custom Days"], ["Hourly Range"]]
+        await update.message.reply_text(
+            "📅 How often should I remind you?\n\n"
+            "• Hourly Range: Every hour in a time range",
+            reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
+        )
+        return FREQUENCY
+    except Exception as e:
+        await update.message.reply_text(f"⚠️ Error in new_reminder: {str(e)}")
+        logger.error(f"Error in new_reminder: {e}", exc_info=True)
+        return ConversationHandler.END
 
 async def frequency_choice(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Handle frequency selection."""
