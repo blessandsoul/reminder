@@ -531,8 +531,9 @@ def schedule_reminder(app, reminder_id: str):
     
     reminder = data[reminder_id]
     time_str = reminder["time"]
+    # 24:00 means end of day - use 23:59 to stay on same day (not 00:00 which is next day)
     if time_str == "24:00":
-        time_str = "00:00"
+        time_str = "23:59"
     
     time_obj = datetime.strptime(time_str, "%H:%M").time().replace(tzinfo=TBILISI_TZ)
     freq = reminder["frequency"]
